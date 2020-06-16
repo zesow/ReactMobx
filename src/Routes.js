@@ -1,11 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Switch, Redirect, Route } from 'react-router-dom';
-// import { context } from './src/etc/context';
-// import ItemList from './container/ItemListContainer';
-// import Item from './container/ItemContainer';
-
-import { Routes as ItemList } from './item'
-import context from "./item/etc/context";
+import {BrowserRouter, Switch,Route} from 'react-router-dom';
+import {Routes as ItemList} from './item';
+import {Routes as Lol} from './lol';
+import context from "./etc/context";
 
 
 const contextPath = context.path();
@@ -14,7 +11,8 @@ console.log(contextPath);
 const Routes = () => (
   <BrowserRouter basename={contextPath}>
     <Switch>
-      <ItemList/>
+      <Route path="/lol" render={() => <Lol/>} />
+      <Route path="/items" render={() => <ItemList/>} />
     </Switch>
   </BrowserRouter>
 );

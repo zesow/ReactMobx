@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import autobind from 'autobind-decorator';
 import {Popup} from "semantic-ui-react";
-import ContentLayout from "../etc/ContentLayout";
+import ContentLayout from "../../etc/ContentLayout";
 import ItemView from "../view/ItemView";
 import Button from "semantic-ui-react/dist/commonjs/elements/Button";
 

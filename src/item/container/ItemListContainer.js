@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import autobind from 'autobind-decorator';
-import ContentLayout from "../etc/ContentLayout";
+import ContentLayout from "../../etc/ContentLayout";
 import ItemListView from "../view/ItemListView";
 import {Button} from "semantic-ui-react";
 

@@ -1,5 +1,7 @@
-import { stores as sampleStores } from './item';
+import { stores as itemStores } from './item';
+import { stores as lolStores } from './lol';
 
 export default {
-  ...sampleStores
+  ...itemStores,
+  ...lolStores
 };

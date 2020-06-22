@@ -2,6 +2,8 @@ import React, {Component, Fragment} from 'react';
 import { observer } from 'mobx-react';
 import {Input, Search, Container, Responsive, Segment, Button} from 'semantic-ui-react';
 import autobind from "autobind-decorator";
+import {Link} from "react-router-dom";
+
 
 @autobind
 @observer
@@ -14,16 +16,22 @@ class SearchView extends Component {
     return (
       <Fragment>
         {/*<Responsive as={Segment}>*/}
-          <Search
+          <Input
             size='massive'
-            icon='search'
             name='username'
+            icon='search'
+            iconPosition='left'
             placeholder='소환사명을 입력해 주세요...'
-            style={{textAlign :'center'}}
+            style={{width :'800px'}}
             value={searchParams.username}
-            onSearchChange={changeSearchParams}
+            onChange={changeSearchParams}
+
           />
-          <Button onClick={findList}>검색</Button>
+          <Button
+            onClick={findList}
+            size='massive'
+            primary
+          >검색</Button>
         {/*</Responsive>*/}
       </Fragment>
     );

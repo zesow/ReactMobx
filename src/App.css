@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.mainBody {
+  background-color: #24AAAA;
+  margin: 200px;
+  font-family: '맑은 고딕', 'Arial';
+  text-align: center;
+}

@@ -4,7 +4,7 @@ import autobind from "autobind-decorator";
 import ContentLayout from "../../etc/ContentLayout";
 import SearchView from "../view/SearchView";
 import MatchListView from "../view/MatchListView";
-import {Container, Segment,Tab} from "semantic-ui-react";
+import {Container, Grid, Segment, Tab} from "semantic-ui-react";
 import styles from '../../App.css';
 
 const panes = [
@@ -39,7 +39,6 @@ class LolContainer extends Component {
         {/*<Tab panes={panes} />*/}
       {/*<ContentLayout >*/}
 
-
         <Segment basic textAlign='center' >
           <SearchView
             searchParams={lolStore.searchParams}
@@ -48,13 +47,25 @@ class LolContainer extends Component {
           />
         </Segment>
 
+      <Grid columns={3}>
 
+        <Grid.Column>
+          플레이어 정보 자리
+        </Grid.Column>
 
-        <Container >
-          <MatchListView
-            matchList={lolStore.matchList}
-          />
-        </Container>
+        <Grid.Column>
+          <Container >
+            <MatchListView
+              matchList={lolStore.matchList}
+            />
+          </Container>
+        </Grid.Column>
+
+        <Grid.Column>
+          뭐넣지?
+        </Grid.Column>
+
+      </Grid>
 
       {/*</ContentLayout>*/}
       </div>

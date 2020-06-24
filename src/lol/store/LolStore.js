@@ -12,6 +12,9 @@ class LolStore {
   @observable _matchList = [];
   @computed get matchList() { return toJS(this._matchList);}
 
+  @observable _leagueEntryDTOSet = [];
+  @computed get leagueEntryDTOSet() { return toJS(this._leagueEntryDTOSet);}
+
   @action
   changeSearchParams = (e, {name,value}) => {
 
@@ -32,11 +35,22 @@ class LolStore {
     await this.lolRepository.findList(this.searchParams)
       .then(action(data => {
         console.log(data);
-        this._matchList = data.matches;
+        this._matchList = data.matchlistDto.matches;
       } ));
 
     console.log(this.matchList);
 
+  };
+
+  @action
+  findUserInfo = async () => {
+    await this.lolRepository.findUserInfo(this.searchParams)
+      .then(action(data => {
+        console.log(data);
+        this._leagueEntryDTOSet = data.leagueEntryDTOSet;
+      } ));
+
+    console.log(this.matchList);
 
   };
 

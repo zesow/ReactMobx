@@ -11,7 +11,7 @@ class SearchView extends Component {
 
   render() {
 
-    const { searchParams, changeSearchParams, findList } = this.props;
+    const { searchParams, changeSearchParams, findInfo } = this.props;
 
     return (
       <Fragment>
@@ -28,7 +28,7 @@ class SearchView extends Component {
 
           />
           <Button
-            onClick={findList}
+            onClick={findInfo}
             size='massive'
             primary
           >검색</Button>

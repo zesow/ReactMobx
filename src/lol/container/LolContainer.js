@@ -6,6 +6,7 @@ import SearchView from "../view/SearchView";
 import MatchListView from "../view/MatchListView";
 import {Container, Grid, Segment, Tab} from "semantic-ui-react";
 import styles from '../../App.css';
+import UserInfoView from "../view/UserInfoView";
 
 const panes = [
   { menuItem: 'Tab 1', render: () => <Tab.Pane>tab1</Tab.Pane> },
@@ -30,6 +31,13 @@ class LolContainer extends Component {
   componentWillUnmount() {
   }
 
+  findInfo = () => {
+    const {lolStore} = this.props;
+
+    lolStore.findList();
+    lolStore.findUserInfo();
+  };
+
   render() {
 
     const {lolStore} = this.props;
@@ -43,14 +51,16 @@ class LolContainer extends Component {
           <SearchView
             searchParams={lolStore.searchParams}
             changeSearchParams={lolStore.changeSearchParams}
-            findList={lolStore.findList}
+            findInfo={this.findInfo}
           />
         </Segment>
 
       <Grid columns={3}>
 
         <Grid.Column>
-          플레이어 정보 자리
+          <UserInfoView
+            leagueEntryDTOSet = {lolStore.leagueEntryDTOSet}
+          />
         </Grid.Column>
 
         <Grid.Column>

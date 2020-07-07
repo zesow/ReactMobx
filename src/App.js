@@ -1,27 +1,25 @@
-import React from 'react';
-
-import { Provider } from "mobx-react";
+import React, {Component} from 'react';
+import { Switch, Route, Link } from "react-router-dom";
+import {Provider} from "mobx-react";
 import stores from "./stores";
 import Routes from "./Routes";
-import {Tab} from "semantic-ui-react";
-import {Routes as Lol} from "./lol";
-import {Route} from "react-router-dom";
-import LolContainer from "./lol/container/LolContainer";
+
+class App extends Component {
 
 
+  render() {
 
-const App =() => {
-  return (
-    <div >
+    return (
+      <div>
 
-
-      <Provider
-        {...stores}
-      >
-        <Routes/>
-      </Provider>
-    </div>
-  );
-};
+        <Provider
+          {...stores}
+        >
+          <Routes/>
+        </Provider>
+      </div>
+    );
+  }
+}
 
 export default App;

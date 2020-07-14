@@ -1,18 +1,13 @@
-name : ReactMobx build
-on:
-  push:
-    branches:
-      - master
+name: my workflow
+on: [push]
 
 jobs:
   build:
+    name: hello github action
     runs-on: ubuntu-18.04
     steps:
-      - name: Checkout source code.
+      - name: checkout source code
         uses: actions/checkout@master
 
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
+      - name: echo Hello
+        run: echo "Hello"

@@ -1,11 +1,10 @@
 body {
-  margin: 0;
   font-family: '맑은 고딕', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #24AAAA;
+  background-color: #282c34;
   margin: 100px;
   text-align: center;
 }
@@ -13,4 +12,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.links {
+  margin: 50px;
+  background-color: #000000;
 }

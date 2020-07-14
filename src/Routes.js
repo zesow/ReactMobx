@@ -1,17 +1,24 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
+import {BrowserRouter, Switch, Route, Link, Redirect} from 'react-router-dom';
 import {Routes as ItemList} from './item';
 import {Routes as Lol} from './lol';
 import context from "./etc/context";
 import {Button} from "semantic-ui-react";
 
+import Initpage from "./initpage/Initpage";
+
 
 const path = context.path();
 
-const Profile = () => <div>You're on the Profile Tab</div>;
+const Profile = () => {
+  console.log('profile');
+  return (<div>You're on the Profile Tab</div>);
+}
 const Comments = () => <div>You're on the Comments Tab</div>;
 const Contact = () => <div>You're on the Contact Tab</div>;
-const InitPage = () => <div>first Page</div>;
+// const InitPage = () => {
+//   console.log('initpage');
+//   return (<div>first Page</div>);}
 
 class Routes extends Component {
 
@@ -21,40 +28,48 @@ class Routes extends Component {
       <div>
 
         <BrowserRouter basename={path}>
-          <Button as={Link} to="/profile">
-            profile
-          </Button>
-          <Button as={Link} to="/comments">
-            comments
-          </Button>
-          <Button as={Link} to="/contact">
-            contact
-          </Button>
-          <Button as={Link} to="/lol">
-            lol
-          </Button>
+          {/*<Button as={Link} to="/profile" >*/}
+          {/*  profile*/}
+          {/*</Button>*/}
+          {/*<Button as={Link} to="/comments" >*/}
+          {/*  comments*/}
+          {/*</Button>*/}
+          {/*<Button as={Link} to="/contact" >*/}
+          {/*  contact*/}
+          {/*</Button>*/}
+          {/*<Button as={Link} to="/lol" >*/}
+          {/*  lol*/}
+          {/*</Button>*/}
+          <nav id="nav-wrap">
+            <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+            <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
+
+            <ul id="nav" className="nav">
+              {/*<li ><a className="smoothscroll" href="#home">Home</a></li>*/}
+              <li><a href="/lol">LOL 전적검색</a></li>
+              {/*<li><a className="smoothscroll" href="#resume">Resume</a></li>*/}
+              {/*<li><a className="smoothscroll" href="#portfolio">Works</a></li>*/}
+              {/*<li><a className="smoothscroll" href="#contact">Contact</a></li>*/}
+            </ul>
+          </nav>
 
           <Switch>
-            <Route path="" component={InitPage}/>
+            <Route path="/initpage" render={() => <Initpage />}/>
+
             <Route path="/lol" render={() => <Lol/>}/>
             <Route path="/items" render={() => <ItemList/>}/>
             <Route path='/profile' exact component={Profile} />
-            <Route path={`/comments`} component={Comments} />
-            <Route path={`/contact`} component={Contact} />
+            <Route path="/comments" component={Comments} />
+            <Route path="/contact" component={Contact} />
+
+            <Redirect path="" to="/initpage" />
           </Switch>
+
         </BrowserRouter>
       </div>
     );
   }
 }
 
-// const Routes = () => (
-//   <BrowserRouter basename={contextPath}>
-//     <Switch>
-//       <Route path="/lol" render={() => <Lol/>} />
-//       <Route path="/items" render={() => <ItemList/>} />
-//     </Switch>
-//   </BrowserRouter>
-// );
 
 export default Routes;

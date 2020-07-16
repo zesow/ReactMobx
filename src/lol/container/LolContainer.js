@@ -71,9 +71,9 @@ class LolContainer extends Component {
           </Container>
         </Grid.Column>
 
-        <Grid.Column>
-          뭐넣지?
-        </Grid.Column>
+        {/*<Grid.Column>*/}
+        {/*  뭐넣지?*/}
+        {/*</Grid.Column>*/}
 
       </Grid>
 

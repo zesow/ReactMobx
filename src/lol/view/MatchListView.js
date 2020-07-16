@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 import {observer} from 'mobx-react';
 
 import autobind from "autobind-decorator";
-import {Table} from "semantic-ui-react";
+import {Table,Responsive} from "semantic-ui-react";
 
 @autobind
 @observer
@@ -15,10 +15,10 @@ class MatchListView extends Component {
         <Table celled>
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell>시간</Table.HeaderCell>
-              <Table.HeaderCell>라인</Table.HeaderCell>
-              <Table.HeaderCell>선택캐릭터</Table.HeaderCell>
-              <Table.HeaderCell>승 / 패</Table.HeaderCell>
+              <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>시간</Responsive>
+              <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>라인</Responsive>
+              <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>선택캐릭터</Responsive>
+              <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>승 / 패</Responsive>
             </Table.Row>
           </Table.Header>
           <Table.Body>
@@ -27,15 +27,15 @@ class MatchListView extends Component {
                 matchList.map(match => {
                   return (
                     <Table.Row>
-                      <Table.Cell>{match.formattedTimestamp}</Table.Cell>
-                      <Table.Cell>{match.lane}</Table.Cell>
-                      <Table.Cell>{match.champion}</Table.Cell>
-                      <Table.Cell>{match.gameId}</Table.Cell>
+                      <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>{match.formattedTimestamp}</Responsive>
+                      <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>{match.lane}</Responsive>
+                      <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>{match.champion}</Responsive>
+                      <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>{match.gameId}</Responsive>
                     </Table.Row>
                   )
                 })
                 :
-                <Table.Row>데이터가 없습니다</Table.Row>
+                <Table.Row >데이터가 없습니다</Table.Row>
             }
           </Table.Body>
         </Table>

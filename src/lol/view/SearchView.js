@@ -22,7 +22,7 @@ class SearchView extends Component {
             icon='search'
             iconPosition='left'
             placeholder='소환사명을 입력해 주세요...'
-            style={{width :'800px'}}
+            // style={{width :'800px'}}
             value={searchParams.username}
             onChange={changeSearchParams}
 

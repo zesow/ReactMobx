@@ -16,13 +16,14 @@ class SearchView extends Component {
     return (
       <Fragment>
         {/*<Responsive as={Segment}>*/}
+
           <Input
             size='massive'
             name='username'
             icon='search'
             iconPosition='left'
             placeholder='소환사명을 입력해 주세요...'
-            // style={{width :'800px'}}
+            // fluid
             value={searchParams.username}
             onChange={changeSearchParams}
 

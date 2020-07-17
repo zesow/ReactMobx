@@ -12,13 +12,13 @@ class MatchListView extends Component {
     const {matchList} = this.props;
     return (
       <Fragment>
-        <Table celled>
+        <Table celled singleLine>
           <Table.Header>
             <Table.Row>
-              <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>시간</Responsive>
-              <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>라인</Responsive>
-              <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>선택캐릭터</Responsive>
-              <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>승 / 패</Responsive>
+              <Table.HeaderCell>시간</Table.HeaderCell>
+              <Table.HeaderCell>라인</Table.HeaderCell>
+              <Table.HeaderCell>선택캐릭터</Table.HeaderCell>
+              <Table.HeaderCell>승 / 패</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
           <Table.Body>
@@ -27,10 +27,10 @@ class MatchListView extends Component {
                 matchList.map(match => {
                   return (
                     <Table.Row>
-                      <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>{match.formattedTimestamp}</Responsive>
-                      <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>{match.lane}</Responsive>
-                      <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>{match.champion}</Responsive>
-                      <Responsive as={Table.Cell} minWidth={Responsive.onlyMobile.minWidth}>{match.gameId}</Responsive>
+                      <Table.Cell>{match.formattedTimestamp}</Table.Cell>
+                      <Table.Cell>{match.lane}</Table.Cell>
+                      <Table.Cell>{match.champion}</Table.Cell>
+                      <Table.Cell>{match.gameId}</Table.Cell>
                     </Table.Row>
                   )
                 })

@@ -5,7 +5,7 @@ import LolContainer from "./container/LolContainer";
 import RouteGroup from "../etc/RouteGroup";
 
 const Routes = () => (
-  <RouteGroup basename="/lol">
+  <RouteGroup basename="/9doc">
     <Route exact render={(props) => <LolContainer {...props} />} />
   </RouteGroup>
 );

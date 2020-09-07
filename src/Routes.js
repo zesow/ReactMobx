@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {BrowserRouter, Switch, Route, Link, Redirect} from 'react-router-dom';
 import {Routes as ItemList} from './item';
 import {Routes as Lol} from './lol';
+import Ninedoc from './ninedoc/Ninedoc';
 import context from "./etc/context";
 import {Button} from "semantic-ui-react";
 
@@ -47,6 +48,7 @@ class Routes extends Component {
             <ul id="nav" className="nav">
               {/*<li ><a className="smoothscroll" href="#home">Home</a></li>*/}
               <li><a href="/lol">LOL 전적검색</a></li>
+              <li><a href="/9doc">9doc</a></li>
               {/*<li><a className="smoothscroll" href="#resume">Resume</a></li>*/}
               {/*<li><a className="smoothscroll" href="#portfolio">Works</a></li>*/}
               {/*<li><a className="smoothscroll" href="#contact">Contact</a></li>*/}
@@ -57,6 +59,7 @@ class Routes extends Component {
             <Route path="/initpage" render={() => <Initpage />}/>
 
             <Route path="/lol" render={() => <Lol/>}/>
+            <Route path="/9doc" render={() => <Ninedoc/>}/>
             <Route path="/items" render={() => <ItemList/>}/>
             <Route path='/profile' exact component={Profile} />
             <Route path="/comments" component={Comments} />

@@ -29,29 +29,14 @@ class Routes extends Component {
       <div>
 
         <BrowserRouter basename={path}>
-          {/*<Button as={Link} to="/profile" >*/}
-          {/*  profile*/}
-          {/*</Button>*/}
-          {/*<Button as={Link} to="/comments" >*/}
-          {/*  comments*/}
-          {/*</Button>*/}
-          {/*<Button as={Link} to="/contact" >*/}
-          {/*  contact*/}
-          {/*</Button>*/}
-          {/*<Button as={Link} to="/lol" >*/}
-          {/*  lol*/}
-          {/*</Button>*/}
+          
           <nav id="nav-wrap">
             <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
             <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
 
             <ul id="nav" className="nav">
-              {/*<li ><a className="smoothscroll" href="#home">Home</a></li>*/}
               <li><a href="/lol">LOL 전적검색</a></li>
               <li><a href="/9doc">9doc</a></li>
-              {/*<li><a className="smoothscroll" href="#resume">Resume</a></li>*/}
-              {/*<li><a className="smoothscroll" href="#portfolio">Works</a></li>*/}
-              {/*<li><a className="smoothscroll" href="#contact">Contact</a></li>*/}
             </ul>
           </nav>
 

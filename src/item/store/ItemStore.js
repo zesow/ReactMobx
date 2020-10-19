@@ -29,6 +29,11 @@ class ItemStore {
   }
 
   @action
+  testMethod(){
+    console.log('test');
+  }
+
+  @action
   async findAllItems() {
     await this.itemRepository.findAllItems()
       .then(action(items => {

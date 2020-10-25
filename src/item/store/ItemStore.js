@@ -13,6 +13,11 @@ class ItemStore {
   @observable
   item = null;
 
+  @action
+  test(){
+    console.log('test');
+  }
+
   @computed
   get items() {
     return toJS(this._items);

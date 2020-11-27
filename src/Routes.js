@@ -2,12 +2,9 @@ import React, {Component} from 'react';
 import {BrowserRouter, Switch, Route, Link, Redirect} from 'react-router-dom';
 import {Routes as ItemList} from './item';
 import {Routes as Lol} from './lol';
-import Ninedoc from './ninedoc/Ninedoc';
+import Ninedoc from './ninedoc/views/mainPage/IndexContainer';
 import context from "./etc/context";
-import {Button} from "semantic-ui-react";
-
 import Initpage from "./initpage/Initpage";
-
 
 const path = context.path();
 
@@ -17,9 +14,6 @@ const Profile = () => {
 }
 const Comments = () => <div>You're on the Comments Tab</div>;
 const Contact = () => <div>You're on the Contact Tab</div>;
-// const InitPage = () => {
-//   console.log('initpage');
-//   return (<div>first Page</div>);}
 
 class Routes extends Component {
 
@@ -42,13 +36,15 @@ class Routes extends Component {
 
           <Switch>
             <Route path="/initpage" render={() => <Initpage />}/>
-
             <Route path="/lol" render={() => <Lol/>}/>
-            <Route path="/9doc" render={() => <Ninedoc/>}/>
             <Route path="/items" render={() => <ItemList/>}/>
             <Route path='/profile' exact component={Profile} />
             <Route path="/comments" component={Comments} />
             <Route path="/contact" component={Contact} />
+
+            {/* Ninedoc */}
+            <Route path="/9doc" render={() => <Ninedoc/>}/>
+            {/* 추가... */}
 
             <Redirect path="" to="/initpage" />
           </Switch>

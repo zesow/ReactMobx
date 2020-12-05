@@ -5,6 +5,7 @@ import {Routes as Lol} from './lol';
 import Ninedoc from './ninedoc/views/mainPage/IndexContainer';
 import context from "./etc/context";
 import Initpage from "./initpage/Initpage";
+import NinedocExplain from './ninedoc/views/explainPage/IndexContainer';
 
 const path = context.path();
 
@@ -44,6 +45,7 @@ class Routes extends Component {
 
             {/* Ninedoc */}
             <Route path="/9doc" render={() => <Ninedoc/>}/>
+            <Route path="/9doc-explain" render={() => <NinedocExplain/>}/>
             {/* 추가... */}
 
             <Redirect path="" to="/initpage" />

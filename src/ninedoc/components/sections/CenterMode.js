@@ -23,7 +23,7 @@ export default class CenterMode extends Component {
               <Image
                 src={require('./../../assets/images/elephant.jpg')}
                 alt="Features tile icon 02"
-                href="/initpage"
+                href="/9doc-explain"
                 width={10000}
                 height={10000}
               />
@@ -34,7 +34,7 @@ export default class CenterMode extends Component {
               <Image
                 src={require('./../../assets/images/dogs.jpg')}
                 alt="Features tile icon 02"
-                href="/initpage"
+                href="/9doc-explain"
                 width={10000}
                 height={10000}
               />
@@ -45,7 +45,7 @@ export default class CenterMode extends Component {
               <Image
                 src={require('./../../assets/images/cat.jpg')}
                 alt="Features tile icon 02"
-                href="/initpage"
+                href="/9doc-explain"
                 width={10000}
                 height={10000}
               />
@@ -56,7 +56,7 @@ export default class CenterMode extends Component {
               <Image
                 src={require('./../../assets/images/giraffe.png')}
                 alt="Features tile icon 02"
-                href="/initpage"
+                href="/9doc-explain"
                 width={10000}
                 height={10000}
               />

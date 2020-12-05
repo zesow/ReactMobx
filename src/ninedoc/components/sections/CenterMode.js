@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import { Image } from "semantic-ui-react";
 
 export default class CenterMode extends Component {
   render() {
@@ -7,9 +8,8 @@ export default class CenterMode extends Component {
       className: "center",
       centerMode: true,
       infinite: true,
-      centerPadding: "60px",
-      slidesToShow: 3,
-      speed: 500,
+      slidesToShow: 1,
+      speed: 2000,
       autoplay: true,
     };
     return (
@@ -17,16 +17,48 @@ export default class CenterMode extends Component {
         {/*<h2>Center Mode</h2>*/}
         <Slider {...settings}>
           <div>
-            <h1>이미지1</h1>
+            <h1>
+              <Image
+                src={require('./../../assets/images/elephant.jpg')}
+                alt="Features tile icon 02"
+                href="/initpage"
+                width={10000}
+                height={10000}
+              />
+            </h1>
           </div>
           <div>
-            <h1>이미지2</h1>
+          <h1>
+              <Image
+                src={require('./../../assets/images/dogs.jpg')}
+                alt="Features tile icon 02"
+                href="/initpage"
+                width={10000}
+                height={10000}
+              />
+            </h1>
           </div>
           <div>
-            <h1>이미지3</h1>
+          <h1>
+              <Image
+                src={require('./../../assets/images/cat.jpg')}
+                alt="Features tile icon 02"
+                href="/initpage"
+                width={10000}
+                height={10000}
+              />
+            </h1>
           </div>
           <div>
-            <h1>이미지4</h1>
+          <h1>
+              <Image
+                src={require('./../../assets/images/giraffe.png')}
+                alt="Features tile icon 02"
+                href="/initpage"
+                width={10000}
+                height={10000}
+              />
+            </h1>
           </div>
         </Slider>
       </div>

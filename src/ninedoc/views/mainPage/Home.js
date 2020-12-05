@@ -12,9 +12,11 @@ const Home = () => {
     <>
       <Hero className="illustration-section-01" />
       <FeaturesTiles />
-      <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" />
-      <Testimonial topDivider />
-      <Cta split />
+
+      {/* TODO : 밑에 추가 설명 필요하면 살리기 */}
+      {/* <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" /> */}
+      {/* <Testimonial topDivider /> */}
+      {/* <Cta split /> */}
     </>
   );
 }

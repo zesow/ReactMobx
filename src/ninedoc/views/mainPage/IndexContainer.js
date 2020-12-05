@@ -28,7 +28,6 @@ const Ninedoc = () => {
     document.body.classList.add('is-loaded')
     childRef.current.init();
     trackPage(page);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
   return (
@@ -36,10 +35,6 @@ const Ninedoc = () => {
       ref={childRef}
       children={() => (
         <Home layout={LayoutDefault}/>
-        // <AppRoute exact component={Home} layout={LayoutDefault} />
-        // <Switch>
-        //   <AppRoute exact path="/9doc" component={Home} layout={LayoutDefault} />
-        // </Switch>
       )} />
   );
 }

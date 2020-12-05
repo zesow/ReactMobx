@@ -11,6 +11,8 @@ export default class CenterMode extends Component {
       slidesToShow: 1,
       speed: 2000,
       autoplay: true,
+      arrows: false,
+      pauseOnHover: true
     };
     return (
       <div>

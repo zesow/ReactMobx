@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "anix": "^0.3.3",
     "autobind-decorator": "^2.4.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "axios-mock-adapter": "^1.16.0",
     "babel-plugin-import": "^1.13.0",
     "babel-plugin-mobx-deep-action": "^1.6.1",
